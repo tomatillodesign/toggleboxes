@@ -1,0 +1,57 @@
+/*-----------------------------------------------------------------------------------*/
+/* Toggle
+/*-----------------------------------------------------------------------------------*/
+
+.clb-toggle {
+     margin-bottom: 30px;
+}
+.clb-toggle .clb-toggle-trigger {
+     display: block;
+     color: #555;
+     display: block;
+     padding: 15px 15px 15px 15px;
+     /* border: 1px solid #ddd; */
+     background: #f9f9f9 no-repeat 15px center;
+     outline: 0;
+     text-transform: none;
+     letter-spacing: normal;
+     font-weight: normal;
+     font-size: 1em;
+     line-height: 1.5em;
+     margin: 0;
+     margin-top: 10px;
+     cursor: pointer;
+}
+
+.clb-toggle .clb-toggle-trigger:before {
+     content: "\f347";
+     font-family: Dashicons;
+     margin-right: 15px;
+     display: inline-table;
+     vertical-align: middle;
+}
+
+.clb-toggle .clb-toggle-trigger:hover {
+     background-color: #eee;
+     text-decoration: none;
+}
+
+.clb-toggle .clb-toggle-trigger.active:before, .clb-toggle .clb-toggle-trigger.active:hover:before {
+     content: "\f343";
+     font-family: Dashicons;
+     margin-right: 15px;
+     display: inline-table;
+     vertical-align: middle;
+}
+
+.clb-toggle .clb-toggle-container {
+     display: none;
+     overflow: hidden;
+     padding: 15px;
+     border: 1px solid #ddd;
+     border-top: 0px;
+}
+
+.clb-toggle.state-open .clb-toggle-container {
+     display: block;
+}
