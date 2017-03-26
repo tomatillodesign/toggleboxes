@@ -112,26 +112,12 @@ function toggle_boxes_foreground_color()
 function display_theme_panel_fields()
 {
 	add_settings_section("section", "All Settings", null, "theme-options");
-	add_settings_field("toggle_boxes_background_color", "Toggle Background Color (HEX)", "toggle_boxes_background_color", "theme-options", "section");
+
+	add_settings_field("toggle_boxes_background_color", "Toggle Background Color (HEX)", "toggle_boxes_background_color", "toggle-boxes", "section");
 	register_setting("section", "toggle_boxes_background_color");
 
-	add_settings_field("toggle_boxes_foreground_color", "Toggle Foreground Color (HEX)", "toggle_boxes_foreground_color", "theme-options", "section");
+	add_settings_field("toggle_boxes_foreground_color", "Toggle Foreground Color (HEX)", "toggle_boxes_foreground_color", "toggle-boxes", "section");
 	register_setting("section", "toggle_boxes_foreground_color");
 }
 
 add_action("admin_init", "display_theme_panel_fields");
-
-
-
-
-
-
-add_action('genesis_entry_content', 'clb_test', 8);
-function clb_test() {
-
-	$option = get_option( 'twitter_url' );
-	$option_publish = $option;
-
-	echo '<h2>' . $option_publish . '</h2>';
-
-}
